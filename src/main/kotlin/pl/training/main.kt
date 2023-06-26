@@ -32,12 +32,11 @@ fun <E> findFirst(xs: Array<E>, predicate: Predicate<E>): Int {
 
 fun isEven(value: Int) = value % 2 == 0
 
-// Partial application
 fun <A, B, C> partial(a: A, fn: (A, B) -> C): (B) -> C = { b -> fn(a, b) }
-
-// Curring and composition
 fun <A, B, C> curry(fn: (A, B) -> C): (A) -> (B) -> C = { a: A -> { b: B -> fn(a, b) } }
 fun <A, B, C> uncurry(fn: (A) -> (B) -> C): (A, B) -> C = { a: A, b: B -> fn(a)(b) }
+fun <A, B, C> compose(f: (B) -> C, g: (A) -> B): (A) -> C = { a: A -> f(g(a)) }
+
 
 fun main() {
     val add2 = add(2)
@@ -56,10 +55,16 @@ fun main() {
     val add4 = partial(4, ::multiAdd)
     println(add4(4))
 
+    val findInNumbers = partial(arrayOf(1, 2, 3, 4), ::findFirst)
+    println(findInNumbers { it == 2 })
+    println(findInNumbers { it == 3 })
+
     val curriedMultiAdd = curry(::multiAdd)
     val add5 = curriedMultiAdd(3)
     println(add5(3))
     println(add5(4))
+    val standardAdd = uncurry(curriedMultiAdd)
+    println(standardAdd(3, 4))
 }
 
 
