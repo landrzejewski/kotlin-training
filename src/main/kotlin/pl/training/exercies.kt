@@ -67,19 +67,11 @@ fun printMenu() {
     println("4 - Divide")
 }
 
-fun main() {
-    // letters()
+/*
+   Napisz klasę reprezentującą pieniądze
+   Założenia:
+   Pieniądze mogą występować w różnych walutach
+   Pieniądze mogą być wymieniane / konwertowane do innej waluty po wskazanym kursie
+   Pieniądze można ze sobą porównywać, dodawać, odejmować
+ */
 
-    /*val year = 2010
-    val isLeap = if (isLeap(year)) "leap" else "not leap"
-    println("Year $year is $isLeap")*/
-
-    /*println("Is a alphanumeric: ${isAlphaNumeric('a')}")
-    println("Is 1 alphanumeric: ${isAlphaNumeric('1')}")
-    println("Is @ alphanumeric: ${isAlphaNumeric('@')}")*/
-
-    println("Factorial for 4 is: ${factorial(4)}")
-
-
-    calc()
-}

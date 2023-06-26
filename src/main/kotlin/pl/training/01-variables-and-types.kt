@@ -183,3 +183,8 @@ fun main() {
      */
 
 }
+
+// Wartości domyślne parametrów
+fun add(value: Int, secondValue: Int = 1) {
+
+}
