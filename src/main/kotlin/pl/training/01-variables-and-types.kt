@@ -2,7 +2,7 @@ package pl.training
 
 // Konwencje kodowania https://kotlinlang.org/docs/coding-conventions.html
 
-// Rozpoczęcie programu odbywa się przez wykonanie specjalnej funkcji main, parametry wejściowe są opcjonalne
+// Rozpoczęcie programu odbywa się przez wykonanie funkcji main, parametry wejściowe są opcjonalne
 
 /*fun main() {
     println("Hello World")
@@ -27,7 +27,8 @@ fun main() {
     /*
 
     Typy danych
-    W języku Kotlin wszystko jest obiektem (brak typów prymitywnych jak w Javie, chociaż są one wykorzystywane "pod spodem" z wyłączeniem typów generycznych oraz nullable)
+    W języku Kotlin wszystko jest obiektem (brak typów prymitywnych jak w Javie, chociaż są one wykorzystywane "pod spodem"
+    z wyłączeniem typów generycznych oraz nullable)
 
     Type	Size (bits)    Min value	Max value
     Byte	8	           -128	        127
@@ -36,7 +37,7 @@ fun main() {
     Long	64	           -263	        263-1
 
     Tak jak wiele innych języków, Kotlin oferuje zestaw typów całkowitych bez znaku. Odznaczają się one większym
-    zakresem liczb dodatnich (kosztem braku wartości ujemnych) i oferują większość operacji dostępnych w ramach typów standardowych.
+    zakresem liczb dodatnich (kosztem braku wartości ujemnych) i oferują większość operacji dostępnych w ramach typów standardowych
 
     Type	Size (bits)	   Min value	Max value
     UByte	8	           0	        255
@@ -71,8 +72,8 @@ fun main() {
     val totalValue: Float = 1.4F // Float
 
     /*
-     W języku kotlin nie występuje niejawna konwersja typów, jednak często jest ona niepotrzebna,
-     ponieważ typ jest wnioskowany z kontekstu. Jawna konwersja typów odbywa się przy użyciu dedykowanych metod np. toByte(), toShort() czy toChar()
+      W języku kotlin nie występuje niejawna konwersja typów, jednak często jest ona niepotrzebna,
+      ponieważ typ jest wnioskowany z kontekstu. Jawna konwersja typów odbywa się przy użyciu dedykowanych metod np. toByte(), toShort() czy toChar()
     */
 
     val value = 3 // Int
@@ -82,7 +83,7 @@ fun main() {
     /*
       Kotlin oferuje standardowy zestaw operatorów arytmetycznych tzn. +, -, *, /, %. Dzielenie liczb
       całkowitych zawsze zwraca liczbę całkowitą (część ułamkowa jest odrzucana). Typ zwracanego wyniku promowany jest do
-       największego z używanych typów. Istnieje możliwość nadpisania standardowych operatorów.
+      największego z używanych typów. Istnieje możliwość nadpisania standardowych operatorów.
     */
 
     val x1 = 5L / 3 // 1 Long
