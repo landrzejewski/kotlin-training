@@ -75,3 +75,10 @@ fun printMenu() {
    Pieniądze można ze sobą porównywać, dodawać, odejmować
  */
 
+/*
+   Napisz grę kółko i krzyżyk
+   Założenia:
+   - Plansza ma rozmiar 3 x 3 pola
+   - Gracze zajmują na przemian wolne pola, stawiając na nich swój znak (kółko lub krzyżyk)
+   - Gra kończy się, kiedy wszystkie pola zostaną zajęte lub jeden z graczy zajmie sekwencję wygrywającą (kolumna, wiersz lub przekątna)
+ */
