@@ -5,7 +5,7 @@ import java.util.Collections.disjoint
 
 class TicTacToe(private var crossFields: MutableSet<Int> = mutableSetOf(), private var circleFields: MutableSet<Int> = mutableSetOf(), player: Player = CROSS) {
 
-    var player = CROSS
+    var player = player
         private set
     val isGameOver: Boolean
         get() = allFieldsAreTake() || playerTookWinningSequence()
@@ -16,7 +16,6 @@ class TicTacToe(private var crossFields: MutableSet<Int> = mutableSetOf(), priva
         if (!disjoint(crossFields, circleFields)) {
             throw IllegalArgumentException()
         }
-        this.player = player
     }
 
     private fun allFieldsAreTake() = BOARD_SIZE - crossFields.size - circleFields.size <= 0
