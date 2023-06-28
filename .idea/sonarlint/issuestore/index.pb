@@ -13,8 +13,6 @@ T
 $src/main/kotlin/pl/training/04-fp.kt,d\4\d4366e0431dcc77fa5553a49873d143c0d3d9a21
 ^
 .src/main/kotlin/pl/training/02-control-flow.kt,f\f\ff04b0c1c68bfa0112233ad48acb8337c340714d
-C
-settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
 U
 %src/main/kotlin/pl/training/03-oop.kt,5\c\5ca372670596eb71f9afd605791931d7a0b83f49
 Z
