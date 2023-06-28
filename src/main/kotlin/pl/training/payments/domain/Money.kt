@@ -36,7 +36,7 @@ class Money(val amount: BigDecimal, val currency: Currency) {
 
     companion object {
 
-        private val DEFAULT_CURRENCY: Currency = Currency.getInstance("PLN")
+        val DEFAULT_CURRENCY: Currency = Currency.getInstance("PLN")
 
         fun of(value: BigDecimal) = Money(value, DEFAULT_CURRENCY)
 

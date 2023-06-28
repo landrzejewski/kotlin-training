@@ -5,9 +5,14 @@ import pl.training.payments.domain.CardTransactionType.WITHDRAW
 import java.time.LocalDate
 import java.util.function.Consumer
 
-data class Card(val id: CardId, val number: CardNumber, val expiration: LocalDate, var balance: Money) {
+data class Card(
+    val id: CardId,
+    val number: CardNumber,
+    val expiration: LocalDate,
+    var balance: Money,
+    val transactions: MutableList<CardTransaction> = mutableListOf()
+) {
 
-    val transactions = mutableListOf<CardTransaction>()
     val eventListeners = mutableListOf<Consumer<CardCharged>>()
 
     fun addTransaction(transaction: CardTransaction) {
