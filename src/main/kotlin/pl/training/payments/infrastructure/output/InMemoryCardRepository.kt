@@ -1,4 +1,4 @@
-package pl.training.payments.infrastructure
+package pl.training.payments.infrastructure.output
 
 import pl.training.payments.application.output.CardRepository
 import pl.training.payments.domain.Card

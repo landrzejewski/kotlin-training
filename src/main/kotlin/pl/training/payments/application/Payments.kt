@@ -1,5 +1,6 @@
 package pl.training.payments.application
 
+import pl.training.payments.application.input.PaymentsService
 import pl.training.payments.application.output.CardEventsPublisher
 import pl.training.payments.application.output.CardRepository
 import pl.training.payments.application.output.TimeProvider
@@ -11,14 +12,14 @@ data class Payments(
     private val repository: CardRepository,
     private val timeProvider: TimeProvider,
     private val eventPublisher: CardEventsPublisher
-) {
+) : PaymentsService {
 
-    fun chargeCard(number: CardNumber, amount: Money) = processOperation(number) {
+    override fun chargeCard(number: CardNumber, amount: Money) = processOperation(number) {
         it.eventListeners.add(createEventListener())
         CardTransaction(timeProvider.getTimestamp(), amount)
     }
 
-    fun chargeFees(number: CardNumber) = processOperation(number) {
+    override fun chargeFees(number: CardNumber) = processOperation(number) {
         val fees = CardTransactionBasedFees(it.transactions).execute()
         CardTransaction(timeProvider.getTimestamp(), fees, FEE)
     }

@@ -1,4 +1,4 @@
-package pl.training.payments.infrastructure
+package pl.training.payments.infrastructure.output
 
 import pl.training.payments.application.CardChargedApplicationEvent
 import pl.training.payments.application.output.CardEventsPublisher
