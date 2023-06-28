@@ -15,7 +15,7 @@ data class Card(
     val transactions: MutableList<CardTransaction> = mutableListOf()
 ) {
 
-    val eventListeners = mutableListOf<Consumer<CardCharged>>()
+    private val eventListeners = mutableListOf<Consumer<CardCharged>>()
 
     fun addTransaction(transaction: CardTransaction) {
         if (!isCardNotExpired(transaction.localDate, expiration)) {
@@ -35,5 +35,7 @@ data class Card(
         val event = CardCharged(number, transaction)
         eventListeners.forEach { it.accept(event) }
     }
+
+    fun addEventsListener(listener: Consumer<CardCharged>) = eventListeners.add(listener)
 
 }

@@ -15,7 +15,7 @@ data class PaymentsService(
 ) : Payments {
 
     override fun chargeCard(number: CardNumber, amount: Money) = processOperation(number) {
-        it.eventListeners.add(createEventListener())
+        it.addEventsListener(createEventListener())
         CardTransaction(timeProvider.getTimestamp(), amount)
     }
 
