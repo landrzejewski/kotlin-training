@@ -28,6 +28,13 @@ class Money(val amount: BigDecimal, val currency: Currency) {
 
     private fun checkCurrencyCompatibility(money: Money) = require(currency == money.currency)
 
+
+    operator fun plus(money: Money) = add(money)
+
+    operator fun minus(money: Money) = subtract(money)
+
+    fun convert(rate: BigDecimal, expectedCurrency: Currency) = Money(amount.multiply(rate), expectedCurrency)
+
     companion object {
 
         private val DEFAULT_CURRENCY: Currency = Currency.getInstance("PLN")
