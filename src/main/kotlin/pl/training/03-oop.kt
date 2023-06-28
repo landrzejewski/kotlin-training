@@ -1,6 +1,8 @@
 package pl.training
 
+import pl.training.payments.domain.Money
 import java.lang.IllegalStateException
+import java.math.BigDecimal
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 import kotlin.reflect.KProperty1
@@ -91,7 +93,7 @@ fun main() {
     person.name = "Jan"
     println(person.name)
 
-    val money = Money(10.0, "PLN")
+    val money = Money(BigDecimal.ONE, Money.DEFAULT_CURRENCY)
     println(readPropert(money, "currency") as String)
 }
 

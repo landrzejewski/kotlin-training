@@ -3,10 +3,10 @@ package pl.training.payments.domain
 import java.math.BigDecimal
 import java.util.*
 
-class Money(val amount: BigDecimal, val currency: Currency) {
+data class Money(val amount: BigDecimal, val currency: Currency) {
 
     init {
-        require(amount.compareTo(BigDecimal.ZERO) >= 1)
+        require(amount.compareTo(BigDecimal.ZERO) >= 0)
     }
 
     fun add(money: Money): Money {

@@ -15,8 +15,6 @@ $src/main/kotlin/pl/training/04-fp.kt,d\4\d4366e0431dcc77fa5553a49873d143c0d3d9
 .src/main/kotlin/pl/training/02-control-flow.kt,f\f\ff04b0c1c68bfa0112233ad48acb8337c340714d
 Z
 *src/main/kotlin/pl/training/05-generics.kt,0\a\0a14934fc32522ff95ac01750f88013a773c1a6e
-U
-%src/main/kotlin/pl/training/03-oop.kt,5\c\5ca372670596eb71f9afd605791931d7a0b83f49
 W
 'src/main/kotlin/pl/training/Template.kt,2\6\263933a0a1a2ac74d2005a2a75cd3aee1693a97f
 [

@@ -2,6 +2,8 @@ package pl.training.payments.domain
 
 import pl.training.payments.domain.CardTransactionType.FEE
 import pl.training.payments.domain.CardTransactionType.WITHDRAW
+import pl.training.payments.domain.Money.Companion.DEFAULT_CURRENCY
+import java.math.BigDecimal.ZERO
 import java.time.LocalDate
 import java.util.function.Consumer
 
@@ -9,7 +11,7 @@ data class Card(
     val id: CardId,
     val number: CardNumber,
     val expiration: LocalDate,
-    var balance: Money,
+    var balance: Money = Money(ZERO, DEFAULT_CURRENCY),
     val transactions: MutableList<CardTransaction> = mutableListOf()
 ) {
 
