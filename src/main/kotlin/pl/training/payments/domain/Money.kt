@@ -19,22 +19,22 @@ class Money(amount: BigDecimal, currency: Currency) {
         return Money(amount.add(money.amount), currency)
     }
 
-    fun subtract(money: Money?): Money {
+    fun subtract(money: Money): Money {
         checkCurrencyCompatibility(money)
-        return Money(amount.subtract(money!!.amount), currency)
+        return Money(amount.subtract(money.amount), currency)
     }
 
     fun multiplyBy(value: Int): Money {
         return Money(amount.multiply(BigDecimal.valueOf(value.toLong())), currency)
     }
 
-    fun isGreaterOrEqual(money: Money?): Boolean {
+    fun isGreaterOrEqual(money: Money): Boolean {
         checkCurrencyCompatibility(money)
-        return amount.compareTo(money!!.amount) > -1
+        return amount.compareTo(money.amount) > -1
     }
 
-    private fun checkCurrencyCompatibility(money: Money?) {
-        require(currency == money!!.currency)
+    private fun checkCurrencyCompatibility(money: Money) {
+        require(currency == money.currency)
     }
 
     companion object {
