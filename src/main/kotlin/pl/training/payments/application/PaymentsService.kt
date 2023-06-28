@@ -19,10 +19,12 @@ data class PaymentsService(
         CardTransaction(timeProvider.getTimestamp(), amount)
     }
 
-    override fun chargeFees(number: CardNumber) = processOperation(number) {
+    override fun chargeCardFees(number: CardNumber) = processOperation(number) {
         val fees = CardTransactionBasedFees(it.transactions).execute()
         CardTransaction(timeProvider.getTimestamp(), fees, FEE)
     }
+
+    override fun getCardTransactions(number: CardNumber) = getCard(number).transactions
 
     private fun processOperation(number: CardNumber, operation: (Card) -> CardTransaction) {
         val card = getCard(number)
