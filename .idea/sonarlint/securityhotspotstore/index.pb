@@ -1,11 +1,6 @@
 
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
-A
-gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
 X
@@ -18,8 +13,6 @@ T
 $src/main/kotlin/pl/training/04-fp.kt,d\4\d4366e0431dcc77fa5553a49873d143c0d3d9a21
 ^
 .src/main/kotlin/pl/training/02-control-flow.kt,f\f\ff04b0c1c68bfa0112233ad48acb8337c340714d
-T
-$src/main/kotlin/pl/training/Money.kt,f\3\f34f9c22270a60babaea53db3208a1f72ac712a1
 C
 settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
 Z
@@ -80,5 +73,3 @@ W
 'src/main/kotlin/pl/training/UsersApi.kt,f\3\f377c858f3448ed985b1be1aafac5f7df51dae72
 ]
 -src/test/kotlin/pl/training/CoroutinesTest.kt,e\5\e52d3ef3093d08c9440e4527f52f5a16e1e48def
-@
-build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
