@@ -21,8 +21,6 @@ U
 %src/main/kotlin/pl/training/03-oop.kt,5\c\5ca372670596eb71f9afd605791931d7a0b83f49
 W
 'src/main/kotlin/pl/training/Template.kt,2\6\263933a0a1a2ac74d2005a2a75cd3aee1693a97f
-W
-'src/main/kotlin/pl/training/exercies.kt,0\c\0ceed8878d28303e6e57508ca692f5581f60221a
 [
 +src/test/kotlin/pl/training/TemplateTest.kt,9\a\9ab39083d3e2c6aecfec3a5e79c91c72cb9d6498
 w

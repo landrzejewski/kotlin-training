@@ -28,7 +28,6 @@ class Money(val amount: BigDecimal, val currency: Currency) {
 
     private fun checkCurrencyCompatibility(money: Money) = require(currency == money.currency)
 
-
     operator fun plus(money: Money) = add(money)
 
     operator fun minus(money: Money) = subtract(money)
