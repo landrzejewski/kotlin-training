@@ -2,6 +2,8 @@ package pl.training
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.CoroutineStart.LAZY
+import kotlinx.coroutines.channels.*
+import kotlinx.coroutines.flow.*
 import org.junit.jupiter.api.Test
 import kotlin.concurrent.thread
 
@@ -185,6 +187,40 @@ class CoroutinesTest {
         //  }
     }
 
+    @Test
+    fun channel() = runBlocking {
+        val channel = Channel<Int>(1)
+        launch(Dispatchers.Default) {
+            for (value in 1 .. 10) {
+                println("Producing: $value")
+                channel.send(value)
+            }
+            channel.cancel()
+        }
+        for (value in channel) {
+            println("Consuming: $value")
+        }
+    }
+
+    fun CoroutineScope.provider() = produce {
+        for (value in 1 .. 10) {
+            println("Producing: $value")
+            send(value)
+        }
+    }
+
+    fun CoroutineScope.power(channel: ReceiveChannel<Int>) = produce {
+        channel.consumeEach { send(it * it) }
+    }
+
+    @Test
+    fun channelsChain() = runBlocking {
+        power(provider()).consumeEach {
+            println("Final value: $it")
+        }
+    }
+
+
     private suspend fun getData(): String {
         delay(5_000)
         return "Data"
@@ -193,6 +229,49 @@ class CoroutinesTest {
     private suspend fun getDataDeferred(): Deferred<String> =  GlobalScope.async {
         delay(5_000)
         "Data"
+    }
+
+    @Test
+    fun tickerChannel()  = runBlocking {
+        val ticker = ticker(delayMillis = 1_000, initialDelayMillis = 5_000)
+        println("Before receive")
+        ticker.receive()
+        println("After receive")
+        ticker.cancel()
+    }
+
+    fun flowProducer() = flow {
+        for (value in 1 .. 10) {
+            println("Producing: $value")
+            emit(value)
+        }
+    }
+
+    @Test
+    fun flowTest() = runBlocking {
+        flowProducer()
+            .map { it * -1 }
+            .filter { it > -3 }
+            .collect { println(it) }
+    }
+
+    @Test
+    fun sharedFlowTest() {
+        val flow = MutableSharedFlow<Int>() // MutableStateFlow(0)
+        GlobalScope.launch {
+            flow.collect { println("Value: $it") }
+        }
+        GlobalScope.launch {
+            //delay(2_000)
+            println("Before emit")
+            flow.emit(1)
+            //delay(2_000)
+            flow.emit(2)
+            //delay(2_000)
+            flow.emit(3)
+            println("After emit")
+        }
+        Thread.sleep(10_000)
     }
 
     fun routine(number: Int, milliseconds: Long) {
