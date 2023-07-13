@@ -9,8 +9,6 @@ X
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 e
 5src/main/kotlin/pl/training/01-variables-and-types.kt,3\4\34e920b9e071fcbede5ab9b25be143adfabacf27
-T
-$src/main/kotlin/pl/training/04-fp.kt,d\4\d4366e0431dcc77fa5553a49873d143c0d3d9a21
 ^
 .src/main/kotlin/pl/training/02-control-flow.kt,f\f\ff04b0c1c68bfa0112233ad48acb8337c340714d
 Z
@@ -24,15 +22,9 @@ G.idea/sonarlint/issuestore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e,5\2\52
 U
 %src/main/kotlin/pl/training/Player.kt,e\a\ea52b5ca2dec3743fab6cf8dd2f3413cb5d4ccff
 Å
-Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
-Å
 Q.idea/sonarlint/securityhotspotstore/5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9,1\e\1e45613b6060de813dc92caeb118e08a2124bc35
-w
-G.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,e\d\ed67eb178d523a4b3f117dcbe0eda5196367ceec
 Å
 Q.idea/sonarlint/securityhotspotstore/4/9/496a238a6afa168dbaf6efd37bb459331589579c,b\0\b0bb0a26d88d16d2e82502fe47e034e248a527a2
-Å
-Q.idea/sonarlint/securityhotspotstore/2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4,a\8\a8a52112049d840217cfa586a3a399d9502f9b94
 Å
 Q.idea/sonarlint/securityhotspotstore/2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3,1\0\1017d171139053a6ceaff055b7159ba14e80dc44
 ]
@@ -47,8 +39,6 @@ G.idea/sonarlint/issuestore/4/9/496a238a6afa168dbaf6efd37bb459331589579c,6\e\6e
 Q.idea/sonarlint/securityhotspotstore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e,2\a\2a357145b04aeee0545d8bc616c6d89a975ff771
 \
 ,src/test/kotlin/pl/training/TicTacToeTest.kt,2\a\2adfeb8a5db79eba982bfd6c146e0b5ca5c2cba6
-w
-G.idea/sonarlint/issuestore/2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4,5\1\516e730a14e71f02fa73f3acd6dc7cea9a9fe002
 w
 G.idea/sonarlint/issuestore/2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3,9\a\9aed88f31eac276604c6355c1adcc0bce1f80fd6
 X
